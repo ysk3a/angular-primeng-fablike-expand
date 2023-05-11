@@ -1,0 +1,24 @@
+<div class="flex flex-column md:flex-row">
+  <div
+    class="p-inputgroup custom-fab"
+    [ngClass]="{'collapse-fab': collapsedFab}"
+  >
+    <input
+      class="filter-input"
+      type="text"
+      pInputText
+      placeholder="Keyword"
+      autofocus
+      [cdkTrapFocusAutoCapture]="!collapsedFab"
+      [cdkTrapFocus]="!collapsedFab"
+    />
+    <button
+      class="fab-button"
+      type="button"
+      pButton
+      icon="pi pi-search"
+      styleClass="p-button-warn"
+      (click)="collapsedFab = !collapsedFab"
+    ></button>
+  </div>
+</div>
