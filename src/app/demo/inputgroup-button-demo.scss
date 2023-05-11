@@ -9,6 +9,9 @@
   // input {
   //   width: 300px;
   // }
+  .collapseable-button {
+    min-height: 42px;
+  }
   .fab-button {
     transition: all 0.5s;
   }
@@ -18,12 +21,20 @@
     min-height: 42px;
   }
   &.collapse-fab {
+    .collapseable-button {
+      width: 0px;
+      padding: 0px;
+      border: none;
+      transition: all 0.1s;
+    }
     .fab-button {
-      border-radius: 6px;
+      // border-radius: 6px;
+      border-radius: 50%;
       transition: all 0.5s;
     }
     .filter-input {
-      border: 1px solid #ced4da;
+      // border: 1px solid #ced4da;
+      border: none;
       width: 0px;
       /* background: #3B82F6; */
       padding: 0px;
