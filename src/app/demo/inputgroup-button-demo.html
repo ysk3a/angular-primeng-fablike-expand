@@ -1,26 +1,8 @@
 <div class="flex flex-column md:flex-row">
-  <div
-    class="p-inputgroup custom-fab"
-    [ngClass]="{'collapse-fab': collapsedFab}"
-  >
-  <button class="collapseable-button" type="button" pButton icon="pi pi-check" styleClass="p-button-success"></button>
+  <div class="p-inputgroup custom-fab" [ngClass]="{'collapse-fab': collapsedFab}">
+    <button class="collapseable-button" type="button" pButton icon="pi pi-check" styleClass="p-button-success"></button>
 
-    <input
-      class="filter-input"
-      type="text"
-      pInputText
-      placeholder="Keyword"
-      autofocus
-      [cdkTrapFocusAutoCapture]="!collapsedFab"
-      [cdkTrapFocus]="!collapsedFab"
-    />
-    <button
-      class="fab-button"
-      type="button"
-      pButton
-      icon="pi pi-search"
-      styleClass="p-button-warn"
-      (click)="collapsedFab = !collapsedFab"
-    ></button>
+    <input class="filter-input" type="text" pInputText placeholder="Keyword" autofocus [cdkTrapFocusAutoCapture]="!collapsedFab" [cdkTrapFocus]="!collapsedFab" />
+    <button class="fab-button" type="button" pButton icon="pi pi-search" styleClass="p-button-warn" appDebounceClick (debounceClick)="fabToggle()" [debounceTime]="500"></button>
   </div>
 </div>

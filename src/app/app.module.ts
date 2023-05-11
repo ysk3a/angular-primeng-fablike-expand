@@ -95,6 +95,7 @@ import { BlockUIModule } from 'primeng/blockui';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { A11yModule } from '@angular/cdk/a11y';
+import { DebounceClickDirective } from './debounce-click.directive';
 
 @NgModule({
   imports: [
@@ -193,7 +194,7 @@ import { A11yModule } from '@angular/cdk/a11y';
     CardModule,
     RouterModule.forRoot([{ path: '', component: InputgroupButtonDemo }]),
   ],
-  declarations: [InputgroupButtonDemo],
+  declarations: [InputgroupButtonDemo, DebounceClickDirective],
   bootstrap: [InputgroupButtonDemo],
   providers: [],
 })
